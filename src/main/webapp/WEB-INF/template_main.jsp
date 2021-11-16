@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>${pageTitle}</title>
-    <link rel="stylesheet" href="${contextRoot}/css/common.css">
+    <link rel="stylesheet" href="${contextRoot}/css/common.css?ver=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
@@ -19,8 +19,13 @@
 
 <jsp:include page="./header.jsp"/>
 <jsp:include page="./sideBar.jsp"/>
+<div class="container">
+    <div class="main-container">
+        <jsp:include page="${contentUrl}"/>
+    </div>
+</div>
 
-<jsp:include page="${contentUrl}"/>
+<jsp:include page="./footer.jsp"/>
 
 </body>
 </html>
