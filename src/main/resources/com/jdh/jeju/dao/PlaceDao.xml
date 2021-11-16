@@ -103,7 +103,7 @@
         where p.place_id=#{id}
     </select>
 
-    <select id="findAll" resultMap="PlaceMap" parameterType="int">
+    <select id="findAll" resultMap="PlaceMap">
         select
             p.place_id,
             p.place_name,
@@ -120,11 +120,32 @@
             jt.title
         from
             jeju_place p
-                join jeju_place_photo pp on p.place_id=pp.place_id
-                join jeju_place_comment c on p.place_id=c.place_id
+            join jeju_place_photo pp on p.place_id=pp.place_id
+            join jeju_place_comment c on p.place_id=c.place_id
+            join jeju_place_user_theme jput on jput.place_id=p.place_id
+            join jeju_theme jt on jput.theme_no=jt.theme_no
+    </select>
+
+    <select id="findTop10" resultMap="PlaceMap">
+        select
+            p.place_id,
+            p.place_name,
+            p.place_address,
+            p.x_coord,
+            p.y_coord,
+            jput.theme_no,
+            jput.user_no,
+            jput.place_id,
+            jt.title,
+            count(*)
+        from
+            jeju_place p
                 join jeju_place_user_theme jput on jput.place_id=p.place_id
                 join jeju_theme jt on jput.theme_no=jt.theme_no
-        where jput.theme_no=#{no}
+        group by theme_no
+        desc
+        limit 10
+
     </select>
 
 </mapper>
