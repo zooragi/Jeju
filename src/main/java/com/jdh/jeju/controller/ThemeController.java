@@ -15,6 +15,8 @@ public class ThemeController {
     @GetMapping("/themes")
     public String list(Model model) throws Exception {
        model.addAttribute("themeList", this.themeService.findThemes());
-       return "/themes/list";
+       model.addAttribute("contentUrl", "./themes/list.jsp");
+       model.addAttribute("pageTitle", "전체테마리스트");
+       return "template_main";
     }
 }

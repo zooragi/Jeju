@@ -5,8 +5,8 @@
 <style>
     .container {
         width : 800px;
-    }</style>
-</head>
+    }
+</style>
 
 <div class = "container">
     <h1>테마 목록 보기</h1>
