@@ -17,31 +17,13 @@
             <i class="fas fa-angle-left"></i>
         </button>
         <ul class="slide-theme-content">
-            <li class="slide-theme-content-item">
-                <div class="icon">👅</div>
-                <div class="theme-title">시작</div>
-                <div class="curators">8명의 큐레이터</div>
-            </li>
-            <li class="slide-theme-content-item">
-                <div class="icon">✔️ </div>
-                <div class="theme-title">맛집맛집맛집</div>
-                <div class="curators">20명의 큐레이터</div>
-            </li>
-            <li class="slide-theme-content-item">
-                <div class="icon">❤️</div>
-                <div class="theme-title">혼자 노트북 하러 가기 좋은 곳1</div>
-                <div class="curators">50명의 큐레이터</div>
-            </li>
-            <li class="slide-theme-content-item">
-                <div class="icon">✨ </div>
-                <div class="theme-title">아야어여오요우유이이</div>
-                <div class="curators">1명의 큐레이터</div>
-            </li>
-            <li class="slide-theme-content-item">
-                <div class="icon">👅</div>
-                <div class="theme-title">마지막</div>
-                <div class="curators">8명의 큐레이터</div>
-            </li>
+            <c:forEach items="${Top10Themes}" var="theme">
+                <li class="slide-theme-content-item">
+                    <div class="icon">👅</div>
+                    <div class="theme-title">${theme.title}</div>
+                    <div class="curators">${theme.hashtags}</div>
+                </li>
+            </c:forEach>
         </ul>
         <button class="right">
             <i class="fas fa-angle-right"></i>

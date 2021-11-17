@@ -16,4 +16,9 @@ public class ThemeService {
     public List<Theme> findThemes() throws Exception {
         return themeDao.findAll();
     }
+
+    public List<Theme> findTop10() throws Exception {
+        return themeDao.findTop10();
+    }
+
 }
