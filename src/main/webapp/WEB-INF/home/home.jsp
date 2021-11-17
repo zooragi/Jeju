@@ -88,64 +88,21 @@
         </div>
         <div class="hot-theme">
             <div class="title">
-                <span>핫 테마</span>
-                <div class="sub">최근 인기있는 테마</div>
+                <span>최신 테마</span>
+                <div class="sub">최근 등록된 테마</div>
             </div>
             <ul class="hot-theme-list">
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
+                <c:forEach items="${latest10Theme}" var="theme">
+                    <li>
+                        <div class="content">
+                            <div class="icon">🥤</div>
+                            <div class="theme-content">
+                                <div class="theme-title">${theme.title}</div>
+                                <div class="curators">${theme.hashtags}</div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">🥤</div>
-                        <div class="theme-content">
-                            <div class="theme-title">커피가 맛나는 곳</div>
-                            <div class="curators">100명의 큐레이터</div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
     </div>

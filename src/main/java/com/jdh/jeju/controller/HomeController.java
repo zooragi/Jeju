@@ -19,6 +19,7 @@ public class HomeController {
     public String home(Model model) throws Exception {
         model.addAttribute("Top10Places",placeService.findTop10());
         model.addAttribute("Top10Themes", themeService.findTop10());
+        model.addAttribute("latest10Theme", themeService.latest10Theme());
         return "home/home";
     }
 }

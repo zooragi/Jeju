@@ -20,5 +20,8 @@ public class ThemeService {
     public List<Theme> findTop10() throws Exception {
         return themeDao.findTop10();
     }
+    public List<Theme> latest10Theme() throws Exception {
+        return themeDao.latest10Theme();
+    }
 
 }
