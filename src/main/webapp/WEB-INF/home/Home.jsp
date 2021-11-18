@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="../template_head.jsp"/>
-<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=3">
+<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=2">
 <script defer src="${contextRoot}/javascript/home.js?ver=2"></script>
 <body>
 

@@ -106,7 +106,7 @@ main {
     padding: 0 var(--font-large);
 }
 .hot-place .hot-place-list{
-    height: 150px;
+    height: 200px;
     overflow: hidden;
 }
 
