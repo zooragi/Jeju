@@ -13,4 +13,7 @@ public class PlaceService {
     @Autowired
     private PlaceDao placeDao;
 
+    public List<Place> findTop10() throws Exception {
+         return placeDao.findTop10();
+    }
 }

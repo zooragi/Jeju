@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.welcomeToJeju.moj.dao.PlaceDao">
+<mapper namespace="com.jdh.jeju.dao.PlaceDao">
 
     <resultMap type="Place" id="PlaceMap">
         <id column="place_id" property="id"/>
@@ -24,6 +24,11 @@
             <result column="place_id" property="placeId"/>
             <result column="user_no" property="userNo"/>
             <result column="comment" property="comment"/>
+        </collection>
+
+        <collection property="themes" javaType="Theme">
+            <id column="theme_no" property="no"/>
+            <result column="title" property="title"/>
         </collection>
     </resultMap>
 
@@ -136,15 +141,11 @@
             jput.theme_no,
             jput.user_no,
             jput.place_id,
-            jt.title,
-            count(*)
+            jt.title
         from
             jeju_place p
                 join jeju_place_user_theme jput on jput.place_id=p.place_id
                 join jeju_theme jt on jput.theme_no=jt.theme_no
-        group by theme_no
-        desc
-        limit 10
 
     </select>
 

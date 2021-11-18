@@ -25,6 +25,10 @@ public interface PlaceDao {
 
     List<Place> findAllByThemeNo(int themeNo) throws Exception;
 
+    List<Place> findAll() throws Exception;
+
+    List<Place> findTop10() throws Exception;
+
     Place findByPlaceId(String id) throws Exception;
 
 }

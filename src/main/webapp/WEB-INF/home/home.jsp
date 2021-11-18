@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="../template_head.jsp"/>
-<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=1">
+<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=2">
 <script defer src="${contextRoot}/javascript/home.js"></script>
 <body>
 
@@ -80,60 +80,21 @@
             <div class="sub">최근 인기있는 지도</div>
         </div>
         <ul class="hot-place-list">
-            <li>
-                <div class="content">
-                    <div class="desc">
-                        <div class="name">강남 불백</div>
-                        <div class="address">강남구 1004-1</div>
+            <c:forEach items="${Top10Places}" var="place">
+                <li>
+                    <div class="content">
+                        <div class="desc">
+                            <div class="name">${place.storeName}</div>
+                            <div class="address">${place.storeAddress}</div>
+                        </div>
+                        <div class="themes">
+                            <c:forEach items="${place.themes}" var="placeBelongTheme" begin="0" end="2">
+                                <div class="theme">${placeBelongTheme.title}</div>
+                            </c:forEach>
+                        </div>
                     </div>
-                    <div class="themes">
-                        <div class="theme">🍣 불백 맛집</div>
-                        <div class="theme">🥦 불백 맛집 리스트입니다</div>
-                        <div class="theme">🍟 불백 맛집 하하하하</div>
-                    </div>
-                    <div class="info">많은 큐레이터들이 추천했어요.</div>
-                </div>
-            </li>
-            <li>
-                <div class="content">
-                    <div class="desc">
-                        <div class="name">강남 불백</div>
-                        <div class="address">강남구 1004-1</div>
-                    </div>
-                    <div class="themes">
-                        <div class="theme">🍣 불백 맛집</div>
-                        <div class="theme">🥦 불백 맛집 리스트입니다</div>
-                        <div class="theme">🍟 불백 맛집 하하하하</div>
-                    </div>
-                    <div class="info">많은 큐레이터들이 추천했어요.</div>
-                </div>
-            </li>
-            <li>
-                <div class="content">
-                    <div class="desc">
-                        <div class="name">강남 불백</div>
-                        <div class="address">강남구 1004-1</div>
-                    </div>
-                    <div class="themes">
-                        <div class="theme">🥦 불백 맛집 리스트입니다</div>
-                        <div class="theme">🍟 불백 맛집 하하하하</div>
-                    </div>
-                    <div class="info">많은 큐레이터들이 추천했어요.</div>
-                </div>
-            </li>
-            <li>
-                <div class="content">
-                    <div class="desc">
-                        <div class="name">강남 불백</div>
-                        <div class="address">강남구 1004-1</div>
-                    </div>
-                    <div class="themes">
-                        <div class="theme">🍣 불백 맛집</div>
-                        <div class="theme">🥦 불백 맛집 리스트입니다</div>
-                    </div>
-                    <div class="info">많은 큐레이터들이 추천했어요.</div>
-                </div>
-            </li>
+                </li>
+            </c:forEach>
         </ul>
     </div>
 </main>
