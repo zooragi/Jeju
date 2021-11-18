@@ -10,7 +10,7 @@
 
 <jsp:include page="./header.jsp"/>
 <jsp:include page="./sideBar.jsp"/>
-<div class="container">
+<div class="container1">
     <div class="main-container">
         <jsp:include page="${contentUrl}"/>
     </div>

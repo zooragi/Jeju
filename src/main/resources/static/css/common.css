@@ -157,12 +157,12 @@ footer .footer-link,
 footer a {
     padding: var(--font-medium);
 }
-.container{
+.container1{
     width: 100%;
     background-color: var(--orange-color);
     padding-bottom: var(--font-huge);
 }
-.container .main-container{
+.container1 .main-container{
     width: 90%;
     margin: 0 auto;
 }
