@@ -24,6 +24,6 @@ public class HomeController {
         model.addAttribute("Top10Themes", themeService.findTop10());
         model.addAttribute("latest10Theme", themeService.latest10Theme());
         model.addAttribute("Top10User", userService.userTop10());
-        return "home/home";
+        return "home/Home";
     }
 }
