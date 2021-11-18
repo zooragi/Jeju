@@ -17,8 +17,11 @@ main {
     padding: 0 var(--font-more-small);
 }
 
-.theme-slide .slide-theme-content-item{
+.theme-slide li{
     display: none;
+}
+
+.theme-slide .slide-theme-content-item{
     flex-direction: column;
     transition: all 0.5s ease-out;
 }
@@ -151,7 +154,6 @@ main {
 .dash-board .hot-theme .hot-theme-list .content:hover,
 .hot-place .hot-place-list li .content:hover{
     background-color: var(--green-color);
-    cursor: pointer;
 }
 
 .dash-board .hot-curators .hot-curators-list li .content{

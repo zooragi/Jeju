@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html>
 <jsp:include page="../template_head.jsp"/>
-<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=2">
-<script defer src="${contextRoot}/javascript/home.js"></script>
+<link rel="stylesheet" href="${contextRoot}/css/home.css?ver=3">
+<script defer src="${contextRoot}/javascript/home.js?ver=2"></script>
 <body>
 
 <main>
@@ -18,10 +18,12 @@
         </button>
         <ul class="slide-theme-content">
             <c:forEach items="${Top10Themes}" var="theme">
-                <li class="slide-theme-content-item">
-                    <div class="icon">👅</div>
-                    <div class="theme-title">${theme.title}</div>
-                    <div class="curators">${theme.hashtags}</div>
+                <li>
+                    <a href="#" class="slide-theme-content-item">
+                        <div class="icon">👅</div>
+                        <div class="theme-title">${theme.title}</div>
+                        <div class="curators">${theme.hashtags}</div>
+                    </a>
                 </li>
             </c:forEach>
         </ul>
@@ -44,11 +46,11 @@
             <ul class="hot-curators-list">
                 <c:forEach items="${Top10User}" var="user">
                     <li>
-                        <div class="content">
+                        <a href="#" class="content">
                             <div class="icon">💀</div>
                             <div class="curator-name">${user.nickname}</div>
                             <div class="theme-count">${user.registeredDate}</div>
-                        </div>
+                        </a>
                     </li>
                 </c:forEach>
             </ul>
@@ -61,13 +63,13 @@
             <ul class="hot-theme-list">
                 <c:forEach items="${latest10Theme}" var="theme">
                     <li>
-                        <div class="content">
+                        <a href="#" class="content">
                             <div class="icon">🥤</div>
                             <div class="theme-content">
                                 <div class="theme-title">${theme.title}</div>
                                 <div class="curators">${theme.hashtags}</div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 </c:forEach>
             </ul>
@@ -82,7 +84,7 @@
         <ul class="hot-place-list">
             <c:forEach items="${Top10Places}" var="place">
                 <li>
-                    <div class="content">
+                    <a href="#" class="content">
                         <div class="desc">
                             <div class="name">${place.storeName}</div>
                             <div class="address">${place.storeAddress}</div>
@@ -92,7 +94,7 @@
                                 <div class="theme">${placeBelongTheme.title}</div>
                             </c:forEach>
                         </div>
-                    </div>
+                    </a>
                 </li>
             </c:forEach>
         </ul>
