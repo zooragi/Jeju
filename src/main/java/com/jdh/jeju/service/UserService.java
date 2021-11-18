@@ -16,4 +16,8 @@ public class UserService {
     public List<User> findUser() throws Exception {
         return userDao.findAll();
     }
+    public List<User> userTop10() throws Exception {
+        return userDao.userTop10();
+    }
+
 }

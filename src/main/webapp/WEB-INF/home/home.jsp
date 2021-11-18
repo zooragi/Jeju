@@ -42,48 +42,15 @@
                 <div class="sub">최근 인기있는 큐레이터</div>
             </div>
             <ul class="hot-curators-list">
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <div class="icon">💀</div>
-                        <div class="curator-name">제주지기</div>
-                        <div class="theme-count">5개의 테마</div>
-                    </div>
-                </li>
+                <c:forEach items="${Top10User}" var="user">
+                    <li>
+                        <div class="content">
+                            <div class="icon">💀</div>
+                            <div class="curator-name">${user.nickname}</div>
+                            <div class="theme-count">${user.registeredDate}</div>
+                        </div>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
         <div class="hot-theme">
