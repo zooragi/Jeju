@@ -61,4 +61,10 @@ public class AuthController {
             return "template_main";
         }
     }
+
+    @GetMapping("/auth/logout")
+    public String logout(HttpSession session, Model model) throws Exception {
+        session.invalidate();
+        return "redirect:/home";
+    }
 }
