@@ -8,8 +8,7 @@
 <link rel="stylesheet" href="${contextRoot}/css/theme_list.css?ver=4">
 <div class="container">
     <div class="main-container">
-        <h1>테마 목록 보기</h1>
-        <a href='../mytheme/addform' class ="btn btn-outline-primary btn-sm" >새 테마 만들기</a><br>
+        <h1>전체테마 목록 보기</h1>
         <ul class="theme-list">
             <c:forEach items="${themeList}" var="theme">
                 <a class="list-container" href="#">
