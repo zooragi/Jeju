@@ -2,6 +2,8 @@
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:set scope="page" var="contextRoot" value="${pageContext.servletContext.contextPath}"/>
+
 <div class="side-menu-bar">
     <button class="close-button">
         <i class="fas fa-times"></i>
@@ -28,8 +30,9 @@
     </c:if>
     <div class="public-menu-box">
         <ul class="public-menu-box-list">
-            <a href="#">
+            <a href="${contextRoot}/theme/list">
                 <li><span class="emozi">🗺️</span><span class="name">전체 테마 보기</span></li>
+            </a>
                 <li><span class="emozi">👨‍👨‍👦</span><span class="name">다른 유저 지도 보기</span></li>
                 <li><span class="emozi">🚨</span><span class="name">신고하기</span></li>
             </a>
