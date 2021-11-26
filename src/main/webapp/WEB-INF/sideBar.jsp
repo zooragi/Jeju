@@ -29,7 +29,7 @@
     <div class="public-menu-box">
         <ul class="public-menu-box-list">
             <a href="#">
-                <li><span class="emozi">🗺️</span><span class="name">지도에서 장소찾기</span></li>
+                <li><span class="emozi">🗺️</span><span class="name">전체 테마 보기</span></li>
                 <li><span class="emozi">👨‍👨‍👦</span><span class="name">다른 유저 지도 보기</span></li>
                 <li><span class="emozi">🚨</span><span class="name">신고하기</span></li>
             </a>
