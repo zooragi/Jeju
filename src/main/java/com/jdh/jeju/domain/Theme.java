@@ -3,7 +3,7 @@ package com.jdh.jeju.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theme implements Comparable<Theme> {
+public class Theme {
 
     private int no;
     private String title;
@@ -11,6 +11,7 @@ public class Theme implements Comparable<Theme> {
     private Category category;
     private int isPublic;
     private int isShare;
+    private String emoji;
 
     private int viewCount;
     private int reportedCount;
@@ -24,6 +25,14 @@ public class Theme implements Comparable<Theme> {
                 + ", isPublic=" + isPublic + ", isShare=" + isShare + ", viewCount=" + viewCount
                 + ", reportedCount=" + reportedCount + ", placeList=" + placeList + ", hashtags=" + hashtags
                 + "]";
+    }
+
+    public String getEmoji() {
+        return emoji;
+    }
+
+    public void setEmoji(String emoji) {
+        this.emoji = emoji;
     }
 
     public int getNo() {
@@ -105,11 +114,5 @@ public class Theme implements Comparable<Theme> {
     public void setHashtags(List<String> hashtags) {
         this.hashtags = hashtags;
     }
-
-    @Override
-    public int compareTo(Theme theme) {
-        return theme.viewCount - this.viewCount;
-    }
-
 
 }
