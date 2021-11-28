@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 @Mapper
 public interface ThemeDao {
@@ -21,6 +22,8 @@ public interface ThemeDao {
     void deletePlaceUserTheme(int themeNo) throws Exception;
 
     List<Theme> findAll() throws Exception;
+    List<Theme> findTop10() throws Exception;
+    List<Theme> latest10Theme() throws Exception;
     List<Theme> findAllPublicTheme() throws Exception;
     List<Category> findAllCategory() throws Exception;
 
