@@ -14,7 +14,7 @@
                 <a class="list-container" href="#">
                     <li>
                         <div class="content">
-                            <div class="icon">💀</div>
+                            <div class="icon">${theme.emoji}</div>
                             <div class="curator-name">${theme.owner.nickname}</div>
                             <div class="theme-count">${theme.hashtags}</div>
                         </div>
